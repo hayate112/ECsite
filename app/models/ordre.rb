@@ -1,0 +1,2 @@
+class Ordre < ApplicationRecord
+end

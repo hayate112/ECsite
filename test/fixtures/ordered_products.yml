@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  order_id: 1
+  count: 1
+  tax_included_price: 1
+  production_status: MyString
+  created_at: 2021-02-24 16:03:07
+  updated_at: 2021-02-24 16:03:07
+
+two:
+  product_id: 1
+  order_id: 1
+  count: 1
+  tax_included_price: 1
+  production_status: MyString
+  created_at: 2021-02-24 16:03:07
+  updated_at: 2021-02-24 16:03:07
