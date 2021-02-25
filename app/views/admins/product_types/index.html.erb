@@ -1,0 +1,23 @@
+<h2>ジャンル一覧・追加</h2>
+
+<%= form_with(model:[:admins, @product_type], local: true) do |f| %>
+  <div class='field'>
+    ジャンル名<%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.submit '新規登録' %>
+  </div>
+<% end %>
+
+<table>
+  <tr>
+    <th>ジャンル</th>
+    <th></th>
+  </tr>
+  <% @product_types.each do |product_type| %>
+    <tr>
+      <td><%= product_type.name %></td>
+      <td><%= link_to '編集する', admins_product_type_path(product_type.id) %></td>
+    </tr>
+  <% end %>
+</table>

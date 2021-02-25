@@ -2,16 +2,16 @@
 
 <%= form_with(model:[:admins, @product], local: true) do |f| %>
   <div class="field">
-    <%= f.label :image_id, '商品画像' %>
-    <%= f.attachment_field :image_id %>
+    <%= f.label :image, '商品画像' %>
+    <%= f.attachment_field :image %>
   </div>
   <div class="field">
     <%= f.label :name, '商品名' %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :descripiton, '商品説明' %>
-    <%= f.text_area :descripiton %>
+    <%= f.label :description, '商品説明' %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :product_type_id, 'ジャンル' %>
@@ -33,6 +33,6 @@
     </div>
   </div>
   <div class="field">
-    <%= f.submit '新規登録' %>
+    <%= f.submit '変更を保存' %>
   </div>
 <% end %>

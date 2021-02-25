@@ -4,15 +4,22 @@
   商品名<%= @product.name %>
 </div>
 <div>
-  商品説明<%= @product.descripiton %>
+  商品説明<%= @product.description %>
 </div>
 <div>
   ジャンル<%= @product.product_type.name %>
 </div>
 <div>
-  税込価格<%= (@product.price * 1.08) %>
+  税込価格<%= (@product.price * 1.08).round %>
   （税抜価格）<%= @product.price %>
 </div>
 <div>
-  販売ステータス<%= @product.is_active %>
+  販売ステータス
+  <% if @product.is_active == true %>
+    販売中
+  <% else %>
+    販売停止中
+  <% end %>
 </div>
+
+<%= link_to '編集する', edit_admins_product_path(@product) %>
