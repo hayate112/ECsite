@@ -4,11 +4,14 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    passwords: 'customers/passwords'
   }
-  
+
   devise_for :admins, controllers: {
-    sessions: 'admins/sessions'
+    registrations: 'admins/registrations',
+    sessions: 'admins/sessions',
+    passwords: 'admins/passwords'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
