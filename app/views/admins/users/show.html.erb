@@ -1,1 +1,50 @@
 <h2>〇〇さんの会員詳細</h2>
+
+<div>
+  会員ID<%= @user.id %>
+</div>
+
+<div>
+  氏名<%= @user.family_name %><%= @user.first_name %>
+</div>
+
+<div>
+  フリガナ<%= @user.family_name_kana %><%= @user.first_name_kana %>
+</div>
+
+<div>
+  郵便番号<%= @user.postal_code %>
+</div>
+
+<div>
+  住所<%= @user.address %>
+</div>
+
+<div>
+  電話番号<%= @user.phone_number %>
+</div>
+
+<div>
+  メールアドレス<%= @user.email %>
+</div>
+
+<div>
+  会員ステータス
+  <% if @user.is_deleted == false %>
+    有効
+  <% else %>
+    退会
+  <% end %>
+</div>
+
+<%= link_to '編集する', edit_admins_user_path %>
+<%= link_to '注文履歴一覧を見る', admins_order_path %>
+
+
+
+
+
+
+
+
+

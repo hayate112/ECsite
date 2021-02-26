@@ -1,5 +1,9 @@
 <h2>商品詳細</h2>
 
+
+<div>
+  <%= attachment_image_tag(@product, :image, fallback: "no_image.jpg", size: "250x250") 
+</div>
 <div>
   商品名<%= @product.name %>
 </div>
