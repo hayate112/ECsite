@@ -1,0 +1,26 @@
+<h2>マイページ</h2>
+
+登録情報<%= link_to '編集する', edit_user_registration_path %>
+
+<div>
+  氏名<%= @user.family_name %><%= @user.first_name %>
+</div>
+<div>
+  カナ<%= @user.family_name_kana %><%= @user.first_name_kana %>
+</div>
+<div>
+  郵便番号<%= @user.postal_code %>
+</div>
+<div>
+  住所<%= @user.address %>
+</div>
+<div>
+  電話番号<%= @user.phone_number %>
+</div>
+<div>
+  メールアドレス<%= @user.email %>
+</div>
+
+配送先<%= link_to '一覧を見る', receivers_path %>
+
+注文履歴<%= link_to '一覧を見る', orders_path %>

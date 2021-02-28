@@ -24,10 +24,24 @@ Rails.application.routes.draw do
   end
 
   scope module: :users do
-    resource :users, only:[:show, :edit, :update]
+    resource :users, only:[:show] do
+      collection do
+        get 'unsubscribe'
+        patch 'withdraw'
+      end
+    end
     resources :products, only:[:index, :show]
-    resources :cart_products, except:[:new, :show, :edit]
+    resources :cart_products, except:[:new, :show, :edit] do
+      collection do
+        delete 'destory_all'
+      end
+      
     resources :receivers, except:[:new, :show]
-    resources :orders, except:[:edit, :update, :destory]
+    resources :orders, except:[:edit, :update, :destory] do
+      collection do
+        post 'comfirm'
+        get 'finish'
+      end
+    end
   end
 end
