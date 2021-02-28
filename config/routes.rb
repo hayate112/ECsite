@@ -35,7 +35,7 @@ Rails.application.routes.draw do
       collection do
         delete 'destory_all'
       end
-      
+    end
     resources :receivers, except:[:new, :show]
     resources :orders, except:[:edit, :update, :destory] do
       collection do
@@ -44,4 +44,5 @@ Rails.application.routes.draw do
       end
     end
   end
+
 end
